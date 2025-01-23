@@ -9,8 +9,10 @@ import (
 	"time"
 )
 
+var testRounds = 50000
+
 func main() {
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 3; i++ {
 		TestGenRanStrLoopCompare()
 		TestGenRanStrSortedSliceIndex()
 	}
@@ -41,7 +43,6 @@ func GenerateRandomString(n int) (string, error) {
 }
 
 func TestGenRanStrLoopCompare() {
-	var testRounds = 10000
 
 	var ideticalStrings = 0
 	var errorCount = 0
@@ -63,7 +64,6 @@ func TestGenRanStrLoopCompare() {
 }
 
 func TestGenRanStrSortedSliceIndex() {
-	var testRounds = 10000
 
 	var ideticalStrings = 0
 	var errorCount = 0
